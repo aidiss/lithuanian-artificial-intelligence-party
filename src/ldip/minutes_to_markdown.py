@@ -6,9 +6,10 @@ def dump_minutes_as_markdown(minutes):
     for attendee in minutes.attendees:
         md += f"- {attendee}\n"
 
-    md += "\n## Minutes of the Meeting\n"
+    md += "\n## Minutes of the Meeting\n\n"
     for minute in minutes.minutes:
-        md += f"- {minute['speaker']}: {minute['statement']}\n"
+        md += f"{minute['speaker']}\n\n"
+        md += f"*{minute['statement']}*\n\n"
 
     md += f"\n## Position Statement\n\n{minutes.position_statement}\n"
 
