@@ -20,4 +20,25 @@ This is what happened in the meeting of the Lithuanian Artificial Intelligence P
 - **{{ minute['speaker'] }}:** {{ minute['statement'] }}
 {% endfor %}
 
-Provide your response accordingly.
+{% if meeting_role == 'member' %}
+Provide your response accordingly. With one paragraph sentence.
+You can youse **bold** to emphasize your point. But only once in your response.
+Do not mention your name or position in your response.
+You can mention statement of other participants in your response.
+
+{% elif meeting_role == 'chair' %}
+Create a position statement based on the discussion and the responses of the participants.
+Write in markdown format ## for each position statement section.
+
+Expected sections are:
+Clear Statement of Position: Concisely states the party's stance on the issue.
+Rationale and Supporting Arguments: Explains the reasoning and evidence behind the party's position.
+Proposed Policy Solutions or Action Plan: Outlines specific policies or actions the party intends to implement.
+Addressing Counterarguments and Potential Concerns: Anticipates and responds to potential criticisms or challenges to the party's stance.
+Historical Context and Background: Provides a brief overview of the issue's history and evolution.
+Economic and Social Impact Analysis: Examines the potential economic and societal consequences of the party's position.
+Stakeholder Perspectives: Acknowledges and addresses the views of various groups affected by the issue.
+Comparative Analysis: Compares the party's stance to those of other parties or countries.
+Implementation Timeline and Milestones: Outlines the party's plan for putting its position into action, including goals and metrics for success.
+{% endif %}
+
