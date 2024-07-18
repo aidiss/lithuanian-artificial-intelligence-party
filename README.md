@@ -78,6 +78,11 @@ Ensure you have the following installed:
 
 We welcome contributions! Please fork the repository and submit pull requests.
 
+## Links
+
+- https://www.valdosta.edu/pa/documents/polpospa.pdf
+- https://en.wikipedia.org/wiki/Position_paper
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
