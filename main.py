@@ -9,12 +9,15 @@ from ldip.minutes_to_markdown import dump_minutes_as_markdown
 
 def main():
     topic = "Defence and safety of Lithuania"
-    urls = [] # Contains important information to ground discussion on the topic
-    foreign_affairs = Member.from_jinja_template("board_chair.md")
-    members = [Member.from_jinja_template(f"head_of/{name}") for name in  os.listdir("role_instructions/head_of")]
+    topic = "Choose most important metrics for the country"
 
-    model = "anthropic/claude-3-5-sonnet-20240620"
-    meeting = PartyMeeting(topic=topic, members=members, chair=foreign_affairs, model=model)
+    meeting = PartyMeeting(
+        topic=topic,
+        members=[Member.from_jinja_template(f"head_of/{name}") for name in os.listdir("role_instructions/head_of")],
+        chair=Member.from_jinja_template("board_chair.md"),
+        model="anthropic/claude-3-5-sonnet-20240620",
+        # urls=[],  # Contains important information to ground discussion on the topic
+    )
     minutes = meeting.conduct_meeting()
     # format datetime
     folder_name = f"{datetime.now():%Y%m%d-%H%M%S} {topic}"

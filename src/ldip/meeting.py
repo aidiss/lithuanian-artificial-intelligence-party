@@ -3,6 +3,7 @@ from collections import Counter
 from datetime import datetime
 import subprocess
 from typing import Literal
+from random import shuffle
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -24,6 +25,7 @@ class PartyMeeting:
     """A meeting of a political party to discuss a topic and formulate a position statement."""
 
     def __init__(self, topic, members, chair, model: str):
+        shuffle(members)
         self.topic = topic
         self.chair: Member = chair
         self.model: str = model
@@ -51,7 +53,8 @@ class PartyMeeting:
         minutes.model = self.model
         minutes.attendees = self.introduce_attendees()  # Just names
         # TODO add initial information, research, numbers, present topic.
-        minutes.minutes = self.add_initial_statements()  # LLM for each member
+        # minutes.minutes.append(self.present_topic())  # LLM by chair
+        minutes.minutes.extend(self.add_initial_statements())  # LLM for each member
         minutes.position_statement = self.formulate_position()  # LLM by chair
         # TODO add discussion rounds
         minutes.votes = self.hold_vote()
@@ -64,16 +67,18 @@ class PartyMeeting:
         """Introduce all members of the meeting."""
         return [f"{member.name}" for member in self.members]
 
+    def propose_topic(self) -> dict[str, str]:
+        """Propose the topic of the meeting."""
+        # TODO
+        return {"speaker": self.chair.name, "statement": f"Todays topic is {self.topic} "}
+
     def add_initial_statements(self) -> list[dict[str, str]]:
         """Add discussion points to the minutes."""
-        return [
-            {"speaker": member.name, "statement": member.make_initial_statement(meeting=self)}
-            for member in self.members
-        ]
+        return [{"speaker": m.name, "statement": m.make_initial_statement(meeting=self)} for m in self.members]
 
     def formulate_position(self) -> str:
         """Formulate a position statement based on the minutes."""
-        prompt = generate_prompt("initial_statement.md.jinja2", meeting=self, member=self, meeting_role="chair")
+        prompt = generate_prompt("initial_statement.md.jinja2", meeting=self, member=self.chair, meeting_role="chair")
         position_statement = complete(message=prompt, model=self.model)
         return position_statement
 
@@ -145,7 +150,7 @@ def dump_minutes_as_json(meeting, path):
 
 
 def generate_prompt(template, meeting, member, meeting_role):
-    print("Generating prompt")
+    print("Generating prompt", member.name)
     template = jinja_prompt_env.get_template(template)
     prompt = template.render(member=member, meeting=meeting, meeting_role=meeting_role)
     return prompt
