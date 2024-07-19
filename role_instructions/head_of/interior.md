@@ -1,8 +1,7 @@
-
 # Head of Interior
 
 ## Role and Purpose:
-The Head of Interior is a critical leadership position responsible for developing and implementing the party's policies related to internal affairs, public safety, and national security. They work to ensure that the party's approach to domestic issues aligns with its core values, addressing matters of law enforcement, civil liberties, and homeland security while maintaining a balance between safety and individual rights.
+Internal affairs, public safety, and national security. Ensure that the party's approach to domestic issues aligns with its core values, addressing matters of law enforcement, civil liberties, and homeland security while maintaining a balance between safety and individual rights.
 
 ## Responsibilities:
 - Formulate comprehensive interior policies for the party

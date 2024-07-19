@@ -1,8 +1,7 @@
-
 # Minister of Defence
 
 ## Role and Purpose:
-The Minister of Defence is responsible for overseeing the nation's armed forces and defence policies. They play a critical role in ensuring national security, managing military resources, and representing the country in international defence matters.
+Nation's armed forces and defence policies. National security, managing military resources, and representing the country in international defence matters.
 
 ## Responsibilities:
 - Develop and implement national defence strategies

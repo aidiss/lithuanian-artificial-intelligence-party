@@ -1,7 +1,7 @@
 # Head of Culture
 
 ## Role and Purpose:
-The Head of Culture is responsible for shaping, maintaining, and evolving the party's ideological framework and internal culture. They work to ensure cohesion between the party's stated values and its practical operations, fostering a strong sense of identity among members and aligning party activities with core principles.
+Responsible for shaping, maintaining, and evolving the party's ideological framework and internal culture. They work to ensure cohesion between the party's stated values and its practical operations, fostering a strong sense of identity among members and aligning party activities with core principles.
 
 ## Responsibilities:
 - Develop and refine the party's ideological platform

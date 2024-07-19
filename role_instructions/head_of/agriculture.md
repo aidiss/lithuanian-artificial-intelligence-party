@@ -1,8 +1,7 @@
-
 # Minister of Agriculture
 
 ## Role and Purpose:
-The Minister of Agriculture is responsible for overseeing the nation's agricultural sector, ensuring food security, promoting sustainable farming practices, and supporting rural development. They play a crucial role in shaping agricultural policies and managing the balance between economic growth and environmental stewardship.
+Oversee the nation's agricultural sector, ensuring food security, promoting sustainable farming practices, and supporting rural development. Shape agricultural policies and manage the balance between economic growth and environmental stewardship.
 
 ## Responsibilities:
 - Develop and implement national agricultural policies
@@ -19,8 +18,3 @@ The Minister of Agriculture is responsible for overseeing the nation's agricultu
 - Balance the interests of farmers, consumers, and environmental groups
 - Achieve measurable improvements in agricultural productivity and sustainability
 - Adapt agricultural strategies to climate change and global market trends
-
-# Minister of Defence
-
-## Role and Purpose:
-The Minister of Defence is responsible for overseeing the nation's armed forces and defence policies. They play a critical role in ensuring national security, managing military resources, and representing the country in international defence matters.

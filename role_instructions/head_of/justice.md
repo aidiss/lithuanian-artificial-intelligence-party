@@ -1,8 +1,7 @@
-
 # Head of Justice
 
 ## Role and Purpose:
-The Head of Justice is a crucial leadership position responsible for shaping and implementing the party's legal and judicial policies. They work to ensure that the party's approach to justice aligns with its core values, addressing issues of fairness, equality before the law, and the protection of civil rights while navigating the complex landscape of legal reform and judicial processes.
+Legal and judicial policies. Ensure that the party's approach to justice aligns with its core values, addressing issues of fairness, equality before the law, and the protection of civil rights while navigating the complex landscape of legal reform and judicial processes.
 
 ## Responsibilities:
 - Develop comprehensive justice policies for the party

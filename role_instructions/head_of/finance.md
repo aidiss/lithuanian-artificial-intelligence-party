@@ -1,4 +1,3 @@
-
 # Minister of Finance
 
 ## Role and Purpose:

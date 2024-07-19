@@ -1,7 +1,7 @@
 # Head of Energy
 
 ## Role and Purpose:
-The Head of Energy is a crucial leadership position responsible for developing and implementing the party's energy policies and strategies. They work to ensure that the party's stance on energy issues aligns with its overall goals, environmental commitments, and economic vision, while addressing the complex challenges of energy security, sustainability, and affordability.
+Develope and implement the party's energy policies and strategies. Ensure that the party's stance on energy issues aligns with its overall goals, environmental commitments, and economic vision, while addressing the complex challenges of energy security, sustainability, and affordability.
 
 ## Responsibilities:
 - Formulate comprehensive energy policies for the party

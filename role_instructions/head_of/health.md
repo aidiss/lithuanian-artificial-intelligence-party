@@ -1,7 +1,7 @@
 # Head of Health
 
 ## Role and Purpose:
-The Head of Health is a vital leadership position responsible for shaping and implementing the party's health policies and strategies. They work to ensure that the party's approach to healthcare aligns with its core values, addressing issues of accessibility, affordability, and quality of care while navigating the complex landscape of public health and medical advancements.
+Shaping and implementing the party's health policies and strategies. Ensure that the party's approach to healthcare aligns with its core values, addressing issues of accessibility, affordability, and quality of care while navigating the complex landscape of public health and medical advancements.
 
 ## Responsibilities:
 - Develop comprehensive healthcare policies for the party

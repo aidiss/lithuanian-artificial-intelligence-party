@@ -1,9 +1,7 @@
-Here are two similar position descriptions for "Head of Social Security and Labour" and "Head of Economic Policy":
-
 # Head of Social Security and Labour
 
 ## Role and Purpose:
-The Head of Social Security and Labour is a crucial leadership position responsible for developing and overseeing the party's policies and initiatives related to social welfare, employment, and labour rights. They work to ensure the party's stance on these issues aligns with its core values while addressing the needs of constituents and responding to evolving societal challenges.
+Social welfare, employment, and labour rights. Ensure the party's stance on these issues aligns with its core values while addressing the needs of constituents and responding to evolving societal challenges.
 
 ## Responsibilities:
 - Formulate and refine the party's social security and labour policies
