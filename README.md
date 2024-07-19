@@ -4,44 +4,30 @@ Welcome to the AI Party Project repository! This project is designed to simulate
 
 ## Motivation
 
-- AI party should be more trustworthy than human politicians:
-    - You know what you get with AI, but you never know with human politicians
-    - AI can be programmed to follow the constitution and party program
-    - AI can be more transparent and accountable than human politicians
-    - AI can be less prone to corruption and personal interests
-    - AI can make decisions based on data and logic rather than emotions and biases
-    - AI can work 24/7 without getting tired or distracted
-    - AI can be more efficient and effective in governance
+AI party should be more trustworthy than human politicians, because
+- You know what you get with AI, but you never know with human politicians
+- AI can be programmed to follow the constitution and party program
+- AI can be more transparent and accountable than human politicians
+- AI can be less prone to corruption and personal interests
+- AI can make decisions based on data and logic rather than emotions and biases
+- AI can work 24/7 without getting tired or distracted
+- AI can be more efficient and effective in governance
 Let's make one for Lithuania!
 
-## Important asp
-
-- Grounded on Lithuanian Laws
-- Grounded on Data
-- Grounded on News
-- Clear party program
-- Clear roles and responsibilities
-- Orchestration of meetings
-
-## Summary
-A number of AI agents that are responsible for different areas of governance. They are programmed to follow the constitution and party program, make decisions based on data and logic, and work together to achieve the party's goals. The AI agents are transparent, accountable, and efficient, making them more trustworthy than human politicians. Product of work creation of political positions.
-
-## Tools
-
-- Constitution generation prompt
-- Role generation prompt
-- Role details generation prompt
 
 ## Features
 
-- **Constitution**: View the constitution of the Lithuanian Party of Artificial Intelligence (LPAI). [Constitution](constitution/constitution.md)
-- **Positions**: Explore the different roles and positions within the AI party. [Positions](positions)
-- **Role Prompts**: Generate unique prompts for different roles within the AI party. [Role](role_instructions)
-- **Minister Prompts**: Specific prompts tailored for ministerial positions. [Minister](role_instructions/president.md)
-- **Meeting Simulation**: Simulate party meetings where roles and positions are assigned. [Meeting](meeting.py)
-- **News Updates**: Check for the latest news relevant to the AI party.
-- **Translation with DeepL**: Translate text using the DeepL API.
+- Grounded on Lithuanian Constitution
+- Clear and transparent Party Constitution
+- Clear and transparent Roles
+- Role responsibilities based on https://www.lrvalstybe.lt/valstybines-institucijos/ministerijos-ir-departamentai
+- Position paper creation meetings.
 
+## Tools
+
+- Party Constitution generation prompt
+- Role generation prompt (Head of Economy, ...)
+- Role details generation prompt
 
 ## Getting Started
 
@@ -77,6 +63,22 @@ Ensure you have the following installed:
 ## Contributing
 
 We welcome contributions! Please fork the repository and submit pull requests.
+
+## ToDo 
+
+- [x] Simulate discussion on a topic
+- [x] Ability to create a position statement based on the discussion
+- [x] Create role description prompts
+- [x] Create party constitution
+- [ ] Create party constitution creation prompt
+- [ ] Opening statement
+- [ ] Handle provided urls as context
+- [ ] Ground on Lithuanian Constitution
+- [ ] Ground on Party Constitution
+- [ ] Add ability to find and use important context like news and statistical data
+- [ ] Add support for multiple discussion rounds
+- [ ] Add ability to create legislation proposals
+- [ ] Create Chair that would use "tool use"/Agentic flow
 
 ## Links
 
