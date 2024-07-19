@@ -1,34 +1,31 @@
 import os
 import sys
+from datetime import datetime
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
-from ldip.meeting import Member, PartyMeeting, generate_prompt
-
-
-def create_meeting(topic: str):
-    meeting = PartyMeeting(
-        topic=topic,
-        members=[Member.from_prompt_file("role_instructions/head_of/foreign_affairs.md")],
-        chair=Member.from_prompt_file("role_instructions/president.md"),
-    )
-    return meeting
+from ldip.meeting import Member, PartyMeeting, dump_minutes_as_json
+from ldip.minutes_to_markdown import dump_minutes_as_markdown
 
 
 def main():
-    meeting = create_meeting("AI in Society")
+    topic = "Defence and safety of Lithuania"
+    urls = [] # Contains important information to ground discussion on the topic
+    foreign_affairs = Member.from_jinja_template("board_chair.md")
+    members = [Member.from_jinja_template(f"head_of/{name}") for name in  os.listdir("role_instructions/head_of")]
+
+    model = "anthropic/claude-3-5-sonnet-20240620"
+    meeting = PartyMeeting(topic=topic, members=members, chair=foreign_affairs, model=model)
     minutes = meeting.conduct_meeting()
-
-    # Play around with prompts
-    member = Member.from_jinja_template("head_of/foreign_affairs.md")
-    prompt = generate_prompt(
-        template="initial_statement.md.jinja2",
-        meeting=meeting,
-        member=member,
-        meeting_role="member",
-    )
-    print(prompt)
-
-    # completion = complete(message=prompt)
+    # format datetime
+    folder_name = f"{datetime.now():%Y%m%d-%H%M%S} {topic}"
+    folder_path = f"positions/{folder_name}"
+    os.mkdir(folder_path)
+    minutes_path = f"{folder_path}/minutes.json"
+    dump_minutes_as_json(meeting, minutes_path)
+    minutes_md = dump_minutes_as_markdown(minutes)
+    minutes_md_path = f"{folder_path}/minutes.md"
+    with open(minutes_md_path, "w") as f:
+        f.write(minutes_md)
 
 
 if __name__ == "__main__":

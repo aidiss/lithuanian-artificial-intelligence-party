@@ -10,6 +10,8 @@ class Vote(BaseModel):
 
 class Minutes(BaseModel):
     topic: str  # topic of the meeting
+    commit: str
+    model: str
     date: str  # date and time of the meeting
     attendees: list[str]  # list of attendee names
     minutes: list[dict[str, str]]  # list of dictionaries with keys: speaker, statement

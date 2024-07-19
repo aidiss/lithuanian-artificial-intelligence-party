@@ -7,7 +7,6 @@ from typing import Literal
 from jinja2 import Environment, FileSystemLoader
 
 from ldip.completion import complete
-from ldip.minutes_to_markdown import dump_minutes_as_markdown
 from ldip.schemas import Minutes
 from ldip.vote_calculator import calculate_voting_results
 
@@ -24,13 +23,16 @@ MINUTES_JSON_PATH = "meeting_minutes.json"
 class PartyMeeting:
     """A meeting of a political party to discuss a topic and formulate a position statement."""
 
-    def __init__(self, topic, members, chair):
+    def __init__(self, topic, members, chair, model: str):
         self.topic = topic
         self.chair: Member = chair
+        self.model: str = model
+        self.commit: str = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).decode("ascii").strip()
         self.members: list[Member] = members
-        self.position_statement = ""
         self.minutes = Minutes(
             topic=topic,
+            model=model,
+            commit=self.commit,
             date=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             attendees=[],
             minutes=[],
@@ -38,37 +40,29 @@ class PartyMeeting:
             votes=[],
             vote_count=Counter(),
         )
-        self.votes = {}
 
     def conduct_meeting(self):
         """Conduct the meeting and generate the minutes.
 
         Every step adds to the `self.minutes`
         """
-
-        # Steps that add to the minutes
-        # self.introduce_attendees()
         minutes = self.minutes
+        minutes.commit = self.commit
+        minutes.model = self.model
         minutes.attendees = self.introduce_attendees()  # Just names
-
+        # TODO add initial information, research, numbers, present topic.
         minutes.minutes = self.add_initial_statements()  # LLM for each member
         minutes.position_statement = self.formulate_position()  # LLM by chair
-        # Todo, add discussion rounds.
+        # TODO add discussion rounds
         minutes.votes = self.hold_vote()
         minutes.vote_count = self.count_votes()
         minutes.voting_results = self.decide_voting_result()
-
         minutes.actions = self.create_action_plan()  # LLM
-
-        dump_minutes_as_json(self)
-        minutes_md = dump_minutes_as_markdown(self.minutes)
-        self.log_to_file(minutes_md)
         return self.minutes
 
     def introduce_attendees(self) -> list[str]:
         """Introduce all members of the meeting."""
-        version = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"]).decode("ascii").strip()
-        return [f"{member.name} {version}" for member in self.members]
+        return [f"{member.name}" for member in self.members]
 
     def add_initial_statements(self) -> list[dict[str, str]]:
         """Add discussion points to the minutes."""
@@ -80,7 +74,7 @@ class PartyMeeting:
     def formulate_position(self) -> str:
         """Formulate a position statement based on the minutes."""
         prompt = generate_prompt("initial_statement.md.jinja2", meeting=self, member=self, meeting_role="chair")
-        position_statement = complete(message=prompt)
+        position_statement = complete(message=prompt, model=self.model)
         return position_statement
 
     def hold_vote(self) -> list[dict[str, str]]:
@@ -138,15 +132,15 @@ class Member:
 
     def make_initial_statement(self, meeting):
         prompt = generate_prompt("initial_statement.md.jinja2", meeting=meeting, member=self, meeting_role="member")
-        statement = complete(message=prompt)
+        statement = complete(message=prompt, model=meeting.model)
         return statement
 
     def __repr__(self) -> str:
         return self.name
 
 
-def dump_minutes_as_json(meeting):
-    with open(MINUTES_JSON_PATH, "w") as file:
+def dump_minutes_as_json(meeting, path):
+    with open(path, "w") as file:
         json.dump(meeting.minutes.model_dump(), file, indent=2)
 
 

@@ -1,6 +1,8 @@
 def dump_minutes_as_markdown(minutes):
     md = f"# {minutes.topic}\n\n"
     md += f"Date: {minutes.date}\n\n"
+    md += f"Model: {minutes.model}\n\n"
+    md += f"Commit: {minutes.commit}\n\n"
 
     md += "\n## Attendees\n"
     for attendee in minutes.attendees:

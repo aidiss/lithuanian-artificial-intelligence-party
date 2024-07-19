@@ -12,7 +12,7 @@ CLAUDE35 = "anthropic/claude-3-5-sonnet-20240620"
 MODEL = CLAUDE35
 
 
-def complete(message, model=MODEL) -> str:
+def complete(message, model) -> str:
     messages = [{"role": "user", "content": message}]
     completion_response = litellm.completion(model, messages)
     content = completion_response.choices[0].message.content  # type: ignore
