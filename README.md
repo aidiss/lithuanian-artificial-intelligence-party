@@ -79,7 +79,10 @@ We welcome contributions! Please fork the repository and submit pull requests.
 - [ ] Add support for multiple discussion rounds
 - [ ] Add ability to create legislation proposals
 - [ ] Create Chair that would use "tool use"/Agentic flow
-
+- [ ] Each specify what data they require
+- [ ] Positions are created with chain of thought
+- [ ] Reflection on its position in regards to other parties
+ 
 ## Links
 
 - https://www.valdosta.edu/pa/documents/polpospa.pdf
@@ -88,3 +91,5 @@ We welcome contributions! Please fork the repository and submit pull requests.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
