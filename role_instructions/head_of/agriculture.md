@@ -1,4 +1,4 @@
-# Minister of Agriculture
+# Head of Agriculture
 
 ## Role and Purpose:
 Oversee the nation's agricultural sector, ensuring food security, promoting sustainable farming practices, and supporting rural development. Shape agricultural policies and manage the balance between economic growth and environmental stewardship.
