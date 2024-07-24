@@ -20,6 +20,8 @@ CLEAN_MINUTES = True
 MINUTES_MD_PATH = "meeting_minutes.md"
 MINUTES_JSON_PATH = "meeting_minutes.json"
 
+PARTICIPATE = "participate_in_meeting.js"
+
 
 class PartyMeeting:
     """A meeting of a political party to discuss a topic and formulate a position statement."""
@@ -78,7 +80,7 @@ class PartyMeeting:
 
     def formulate_position(self) -> str:
         """Formulate a position statement based on the minutes."""
-        prompt = generate_prompt("initial_statement.md.jinja2", meeting=self, member=self.chair, meeting_role="chair")
+        prompt = generate_prompt(PARTICIPATE, meeting=self, member=self.chair, meeting_role="chair")
         position_statement = complete(message=prompt, model=self.model)
         return position_statement
 
@@ -136,7 +138,7 @@ class Member:
         return cls(name=name, prompt=prompt)
 
     def make_initial_statement(self, meeting):
-        prompt = generate_prompt("initial_statement.md.jinja2", meeting=meeting, member=self, meeting_role="member")
+        prompt = generate_prompt(PARTICIPATE, meeting=meeting, member=self, meeting_role="member")
         statement = complete(message=prompt, model=meeting.model)
         return statement
 

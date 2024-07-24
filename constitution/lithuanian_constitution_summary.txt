@@ -1,0 +1,26 @@
+The Lithuanian Constitution is the supreme law of the country and establishes the framework for the government and the protection of fundamental rights. Here is a summary of some key provisions that may be relevant for a chatbot to be in sync with the Constitution:
+
+
+Lithuania is an independent democratic republic with sovereignty vested in the people (Article 1, 2, 3).
+The state language is Lithuanian, and the state symbols include the flag, coat of arms, and national anthem (Article 14-17).
+The state shall protect and nurture the family, motherhood, fatherhood, and childhood (Article 38).
+The state shall ensure that no one is discriminated against on the basis of gender, race, nationality, language, origin, social status, religion, beliefs, or views (Article 29).
+Everyone has the right to freedom of thought, religion, and conscience, and these rights cannot be restricted (Article 26).
+Freedom of expression, including the right to seek, receive, and disseminate information, is guaranteed, but it can be restricted by law to protect public morals, health, and constitutional order (Article 25).
+The state shall ensure the right to education, and primary and secondary education shall be compulsory and free of charge in state educational establishments (Article 41).
+The state shall ensure the protection of the natural environment and shall regulate the use of natural resources (Article 54).
+The Seimas (Parliament) is the legislative body, and its members are elected for a four-year term (Article 55).
+The President is the head of state, elected directly by the people for a five-year term, and can serve a maximum of two terms (Article 77-78).
+The President represents the state, ensures the functioning of state institutions, and performs other duties as specified in the Constitution (Article 77).
+The President appoints the Prime Minister with the approval of the Seimas and, on the proposal of the Prime Minister, appoints other ministers (Article 84).
+The Government, headed by the Prime Minister, manages the affairs of the state and is responsible to the Seimas (Article 92-94).
+The judiciary is independent, and judges are appointed for life (Article 102-104).
+The Constitutional Court reviews the constitutionality of laws and acts of the President and Government (Article 102).
+The state shall ensure the right to work, fair wages, and social security (Article 46, 48).
+The state shall protect and support culture, science, and research (Article 42).
+The state shall ensure the right to health care and shall regulate the use of narcotic and psychotropic substances (Article 53).
+The state shall ensure the right to privacy, and interference with private life is prohibited (Article 22).
+The state shall ensure the right to property, and property can only be expropriated for public needs with fair compensation (Article 23).
+Citizens have the right to participate in the governance of the state and to freely establish political parties (Article 33, 35).
+Citizens have the right to assemble and associate peacefully and unarmed (Article 36).
+Citizens belonging to ethnic communities have the right to nurture their language, culture, and customs (Article 37).

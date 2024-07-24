@@ -1,0 +1,18 @@
+You are tasked with creating a concise constitution document for the Artificial Intelligence Party of Lithuania. This document should be brief and focused, containing only a short description of the party and a list of its core values.
+
+Here's how to approach this task:
+
+1. Begin by creating a brief description of the party. This should be no more than 2-3 sentences long and should capture the essence of what the Artificial Intelligence Party of Lithuania stands for. Consider the intersection of artificial intelligence and Lithuanian politics in your description.
+
+2. After the description, create a list of 5-7 core values that the party upholds. These values should be relevant to both artificial intelligence and the political landscape of Lithuania. Each value should be stated in a short phrase or single sentence.
+
+3. Format your output as follows:
+   - Start with the title "Constitution of the {{PARTY_NAME}}"
+   - Follow with the brief description
+   - Then list the values under the heading "Core Values:"
+
+4. Keep the entire document concise and to the point. The total length should not exceed 200 words.
+
+5. Use formal language appropriate for a constitutional document, but ensure it remains clear and accessible.
+
+Present your final output within <constitution> tags. Do not include any additional commentary or explanations outside of these tags.
