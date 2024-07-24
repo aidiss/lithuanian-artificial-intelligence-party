@@ -2,12 +2,13 @@
 
 Date: 2024-07-18 22:33:51
 
+Commit: b9e99a6
 
 ## Attendees
-- Head of Foreign Affairs b9e99a6
-- Head of Economy b9e99a6
-- Head of Transport b9e99a6
-- Head of Education b9e99a6
+- Head of Foreign Affairs
+- Head of Economy
+- Head of Transport
+- Head of Education
 
 ## Minutes of the Meeting
 
