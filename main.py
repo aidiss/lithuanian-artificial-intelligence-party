@@ -6,6 +6,13 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from ldip.meeting import Member, PartyMeeting, dump_minutes_as_json
 from ldip.minutes_to_markdown import dump_minutes_as_markdown
 
+LLAMA3_8B = "ollama_chat/llama3:8b"
+GPT35_TURBO = "openai/gpt-3.5-turbo"
+GPT4o_MINI = "openai/gpt-4o-mini"
+CLAUDE35 = "anthropic/claude-3-5-sonnet-20240620"
+
+MODEL = LLAMA3_8B
+
 
 def main():
     topic = "Defence and safety of Lithuania"
@@ -15,7 +22,7 @@ def main():
         topic=topic,
         members=[Member.from_jinja_template(f"head_of/{name}") for name in os.listdir("role_instructions/head_of")],
         chair=Member.from_jinja_template("board_chair.md"),
-        model="anthropic/claude-3-5-sonnet-20240620",
+        model=MODEL,
         # urls=[],  # Contains important information to ground discussion on the topic
     )
     minutes = meeting.conduct_meeting()
